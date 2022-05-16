@@ -1,0 +1,164 @@
+
+body  {
+  margin: 0;
+  width: 100%;
+}
+
+div {
+  box-sizing : border-box; 
+}
+
+.wrapper {
+  width:100%;
+  height:100%;
+}
+
+.header-1 {
+  width:100%;
+  height:80px;
+  background-color: #8e0000;
+
+}
+
+.header-1 span {
+  color:white;
+  font-weight:bold;
+  font-size:40px;
+  line-height: 80px;
+  margin-left: 200px;
+}
+
+.search-bar {
+  width:300px;
+  height:30px;
+  border:none;
+  margin-right:40px;
+  padding-left:40px;
+}
+
+.search-bar:focus {
+  outline:none;
+}
+
+.header-2 {
+  width:100%;
+  height:50px;
+  background-color: #c62828;
+  line-height: 50px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  margin-right:26px;
+}
+  
+.header-2 span {
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+  margin-left:200px;
+}
+
+.header-2 i {
+  margin-right:10px;
+  color: white;
+}
+
+.form-box {
+  display: inline-block;
+}
+
+.write-btn {
+  text-align: center;
+  height:50px;
+  margin-top: 100px;
+}
+
+.write-btn button {
+  line-height: 40px;
+  margin-left: 500px;
+  font-weight:800;
+  font-size:18px;
+  padding-top:1px;
+  padding-bottom:1px;
+}
+
+.content-list {
+  width:100%;
+  height:250px;
+  display: flex;
+  justify-content: center;
+}
+
+.list-1 {
+  width:30%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-1 span {
+  line-height: 60px;
+}
+
+.list-1 span:nth-child(1) {
+  font-size:25px;
+  color:#c62828;
+  font-weight: bold;
+}
+
+.list-1 span:nth-child(2) {
+  font-size:15px;
+  text-align: right;
+  
+}
+
+.list-1 span:nth-child(3) {
+  font-size:20px;
+}
+
+.list-1 span:nth-child(4) {
+  font-size:15px;
+  width:80px;
+  cursor: pointer;
+  color: #ff5f52;
+}
+
+.list-1 hr {
+  width:100%;
+  border:solid 1px rgb(0, 0, 0);
+  border-top-width:0px;
+}
+
+@media (max-width: 800px) {
+
+  .list-1 {
+    width:80%;
+  }
+
+  .list-1 span:nth-child(2)  {
+    text-align: left;
+  }
+
+  .write-btn {
+    margin-left:-250px;
+  }
+
+  .header-1 span{
+    margin-left:40px;
+  }
+  .header-2 span {
+    margin-left:40px;
+  }
+
+  .search-bar {
+    width:150px;
+  }
+}
+
+@media (max-width: 413px) {
+
+  .write-btn {
+    margin-left:-350px;
+  }
+}
+
