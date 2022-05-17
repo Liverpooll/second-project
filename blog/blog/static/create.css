@@ -2,6 +2,7 @@ body  {
   margin: 0;
   width: 100%;
   background-color: rgba(245, 244, 244, 0.984);
+  position:relative;
 }
 
 ::-webkit-scrollbar {
@@ -69,7 +70,7 @@ div {
   color:white;
   font-weight:bold;
   font-size:20px;
-  margin-left:200px;
+  margin-left:250px;
 }
 
 .header-2 i {
@@ -81,17 +82,22 @@ div {
   display: inline-block;
 }
 
+.mini-wrapper {
+  display: flex;
+}
+
 .write-box {
   width:50%;
   height:830px;
   margin:0 auto;
   background-color: white;
   text-align: center;
+
+
 }
 
 .write-content {
   width:100%;
-  display: inline-block;
   margin-top:100px;
 }
 
@@ -121,11 +127,16 @@ div {
   vertical-align: bottom;
   text-align: center;
   border:none;
+
 }
 .input-content:focus {
   outline:none;
 }
 
+/* .btn {
+  font-weight:600;
+
+}  */
 
 
 

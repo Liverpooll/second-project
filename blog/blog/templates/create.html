@@ -23,23 +23,42 @@
                 <span>Logout</span>
                 <form class="form-box" action="#">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="search-bar" type="text" placeholder="search!">
+                    <input class="search-bar" type="text" 
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='search!'"
+                    placeholder="search!">
                 </form>
             </div>
         </div>
 
+
+        <div class="mini-wrapper">
         <div class="write-box">
         <div class="write-content">
         <form action="#">
-        <textarea placeholder="제목을 입력하세요"  style="overflow:hidden" type="text" class="input-title"></textarea>
+        <textarea placeholder="제목을 입력하세요" 
+         style="overflow:hidden" type="text"
+         onfocus="this.placeholder=''"
+         onblur="this.placeholder='제목을 입력하세요'"
+          class="input-title"></textarea>
         </form>
 
         <hr>
         <form action="#">
-        <textarea placeholder="내용을 입력하세요" type="text" class="input-content"></textarea>
+        <textarea placeholder="내용을 입력하세요" type="text" 
+        onfocus="this.placeholder=''"
+         onblur="this.placeholder='내용을 입력하세요'"
+        class="input-content"></textarea>
         </form>
         </div>
-        </div>
+
+        </div>            
+            {% comment %} <div class="write-btn">
+          <button type="button" class="btn btn-danger">등록</button>
+        </div> {% endcomment %}
+</div>
+
+        
 
 
 
