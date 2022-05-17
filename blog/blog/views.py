@@ -77,3 +77,10 @@ class PostUpdate(APIView):
             logging.info(serializer)
             id = serializer.data['id']
             return redirect(f'/blog/detail/{id}')
+
+
+class PostDelete(APIView):
+    def get(self, request, pk):
+        post = get_object_or_404(Post, pk=pk)
+        post.delete()
+        return redirect(f'/blog/list')
