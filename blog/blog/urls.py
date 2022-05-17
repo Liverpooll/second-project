@@ -8,5 +8,5 @@ urlpatterns = [
     path('list/', views.PostList.as_view(), name='list'),
     path('detail/<int:pk>', views.PostDetail.as_view(), name='detail'),
     path('create/', views.PostCreate.as_view(), name='create'),
-    path('update/', views.PostUpdate.as_view(), name='update'),
+    path('update/<int:pk>', views.PostUpdate.as_view(), name='update'),
 ]

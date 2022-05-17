@@ -56,5 +56,24 @@ class PostUpdate(APIView):
     renderer_classes = [TemplateHTMLRenderer]
     template_name = 'update.html'
 
-    def get(self, request):
-        return Response()
+    def get(self, request, pk):
+        post = get_object_or_404(Post, pk=pk)
+        return Response({'post':post})
+
+    def put(self, request, pk):
+        post = get_object_or_404(Post, pk=pk)
+        serializer = PostSerializer(
+            post,
+            data = {
+                'title':request.POST.get('title'),
+                'content':request.POST.get('content'),
+            }
+        )
+        if not serializer.is_valid():
+            logging.info('not valid')
+            return Response()
+        else:
+            serializer.save()
+            logging.info(serializer)
+            id = serializer.data['id']
+            return redirect(f'/blog/detail/{id}')
