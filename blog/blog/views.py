@@ -1,10 +1,15 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 
 from rest_framework.views import APIView
 from rest_framework.renderers import TemplateHTMLRenderer
 from rest_framework.response import Response
 
+from blog.serializers import PostSerializer
+
 from blog.models import Post
+
+import logging
+logging.basicConfig(level=logging.INFO)
 
 
 class PostList(APIView):
@@ -31,6 +36,20 @@ class PostCreate(APIView):
 
     def get(self, request):
         return Response()
+    
+    def post(self, request):
+        logging.info(request.data)
+        serializer = PostSerializer(data = {
+            'title':request.POST.get('title'),
+            'content':request.POST.get('content'),
+        })
+        if not serializer.is_valid():
+            logging.info('not valid')
+            return Response()
+        else:
+            serializer.save()
+            id = serializer.data['id']
+            return redirect(f'/blog/detail/{id}')
 
 
 class PostUpdate(APIView):
