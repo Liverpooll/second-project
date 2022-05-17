@@ -21,49 +21,26 @@
             </div>
             <div class="header-2">
                 <span>Logout</span>
-                <form class="form-box" action="#">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input class="search-bar" type="text" 
-                    onfocus="this.placeholder=''"
-                    onblur="this.placeholder='search!'"
-                    placeholder="search!">
-                </form>
             </div>
         </div>
 
 
-        <div class="mini-wrapper">
-        <div class="write-box">
-        <div class="write-content">
-        <form action="#">
-        <textarea placeholder="제목을 입력하세요" 
-         style="overflow:hidden" type="text"
-         onfocus="this.placeholder=''"
-         onblur="this.placeholder='제목을 입력하세요'"
-          class="input-title"></textarea>
-        </form>
+        <div class="form-box">
+            <form action="/blog/create/" method="POST">
+                <div class="write-title">
+                    <textarea placeholder="제목을 입력하세요" style="overflow:hidden" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='제목을 입력하세요'" class="input-title"></textarea>
+                </div>
 
-        <hr>
-        <form action="#">
-        <textarea placeholder="내용을 입력하세요" type="text" 
-        onfocus="this.placeholder=''"
-         onblur="this.placeholder='내용을 입력하세요'"
-        class="input-content"></textarea>
-        </form>
+                <hr>
+
+                <div class="write-content">
+                    <textarea placeholder="내용을 입력하세요" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='내용을 입력하세요'" class="input-content"></textarea>
+                </div>
+                <div class="write-btn">
+                    <button type="submit" name="submit">버튼</button>
+                </div>
+            </form>
         </div>
-
-        </div>            
-            {% comment %} <div class="write-btn">
-          <button type="button" class="btn btn-danger">등록</button>
-        </div> {% endcomment %}
-</div>
-
-        
-
-
-
-
-
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

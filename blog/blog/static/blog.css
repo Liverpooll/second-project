@@ -1,6 +1,7 @@
 
 body  {
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.984);
   width: 100%;
 }
 
@@ -129,13 +130,16 @@ div {
 
 .list-1 span:nth-child(3) {
   font-size:20px;
+  cursor: pointer;
 }
 
-.list-1 span:nth-child(4) {
+.list-1 a{
   font-size:15px;
+  margin-top:20px;
   width:80px;
   cursor: pointer;
-  color: #ff5f52;
+  text-decoration: none;
+
 }
 
 .list-1 hr {

@@ -21,21 +21,15 @@
             </div>
             <div class="header-2">
             <span>Logout</span>
-            <form class="form-box" action="#">
-             <i class="fa-solid fa-magnifying-glass"></i>
-            <input class="search-bar" type="text"
-            onfocus="this.placeholder=''"
-            onblur="this.placeholder='search!'"
-            placeholder="search!">
-             </form>
 
             </div>
         </div>
 
         <div class="write-btn">
-            <button type="button" class="btn btn-danger">글쓰기</button>
+            <button onclick = "location.href = 'http://127.0.0.1:8000/blog/create/' " type="button" class="btn btn-danger">글쓰기</button>
         </div>
 
+        {% for i in todolist %}
         <div class="content-list">
             <div class="list-1">
                 <span>글 제목</span>
@@ -45,25 +39,17 @@
                 <hr>
             </div>
         </div>
+        {% endfor %}
                 <div style="margin-top:50px;" class="content-list">
             <div class="list-1">
                 <span>글 제목</span>
                 <span>Data / Nickname</span>
-                <span>First-line</span>
-                <span>Read more</span>
+                <span onclick="location.href='http://127.0.0.1:8000/blog/detail/1'">Title</span>
+                <a href="http://127.0.0.1:8000/blog/detail/1" style="color:red;">Read more</a>
                 <hr>
             </div>
         </div>
-                        <div style="margin-top:50px;" class="content-list">
-            <div class="list-1">
-                <span>글 제목</span>
-                <span>Data / Nickname</span>
-                <span>First-line</span>
-                <span>Read more</span>
-                <hr>
-            </div>
-        </div>
-    </div>
+
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
