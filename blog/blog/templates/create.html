@@ -16,7 +16,7 @@
     <div class="wrapper">
         <div class="header">
             <div class="header-1">
-                <span>Logo</span>
+                <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
                 <span>Nickname</span>
             </div>
             <div class="header-2">
@@ -27,17 +27,25 @@
 
         <div class="form-box">
             <form action="/blog/create/" method="POST">
+                {% csrf_token %}
                 <div class="write-title">
-                    <textarea placeholder="제목을 입력하세요" style="overflow:hidden" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='제목을 입력하세요'" class="input-title"></textarea>
+                    <input placeholder="제목을 입력하세요" 
+                    name="title"
+                    style="overflow:hidden" type="text" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='제목을 입력하세요'" class="input-title">
+                    {{title}}</input>
                 </div>
-
                 <hr>
-
                 <div class="write-content">
-                    <textarea placeholder="내용을 입력하세요" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='내용을 입력하세요'" class="input-content"></textarea>
+                    <textarea placeholder="내용을 입력하세요" 
+                    name="content"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='내용을 입력하세요'"
+                    class="input-content">
+                    {{content}}</textarea>
                 </div>
                 <div class="write-btn">
-                    <button type="submit" name="submit">버튼</button>
+                    <button type="submit" name="btn">버튼</button>
                 </div>
             </form>
         </div>

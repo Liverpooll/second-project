@@ -16,12 +16,11 @@
     <div class="wrapper">
         <div class="header">
             <div class="header-1">
-            <span>Logo</span>
+            <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
             <span>Nickname</span>
             </div>
             <div class="header-2">
             <span>Logout</span>
-
             </div>
         </div>
 
@@ -29,26 +28,21 @@
             <button onclick = "location.href = 'http://127.0.0.1:8000/blog/create/' " type="button" class="btn btn-danger">글쓰기</button>
         </div>
 
-        {% for i in todolist %}
+        {% for i in post %}
         <div class="content-list">
             <div class="list-1">
-                <span>글 제목</span>
+                <span>{{i.title}}</span>
                 <span>Data / Nickname</span>
-                <span>First-line</span>
-                <span>Read more</span>
+                <span onclick="location.href='http://127.0.0.1:8000/blog/detail/{{i.pk}}'">{{i.content}}</span>
+                <span onclick="location.href='http://127.0.0.1:8000/blog/detail/{{i.pk}}'" style="color:red; cursor:pointer;">Read more</span>
                 <hr>
             </div>
         </div>
+        <div class="nbsp"></div>
         {% endfor %}
-                <div style="margin-top:50px;" class="content-list">
-            <div class="list-1">
-                <span>글 제목</span>
-                <span>Data / Nickname</span>
-                <span onclick="location.href='http://127.0.0.1:8000/blog/detail/1'">Title</span>
-                <a href="http://127.0.0.1:8000/blog/detail/1" style="color:red;">Read more</a>
-                <hr>
-            </div>
-        </div>
+
+
+
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

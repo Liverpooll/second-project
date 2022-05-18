@@ -17,7 +17,7 @@
     <div class="wrapper">
         <div class="header">
             <div class="header-1">
-                <span>Logo</span>
+                <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
                 <span>Nickname</span>
             </div>
             <div class="header-2">
@@ -25,27 +25,26 @@
             </div>
         </div>
 
-
         <div class="mini-wrapper">
         <div class="write-box">
         <div class="write-content">
         <p class="text-title">
-        글 제목
+        {{post.title}}
         </p>
 
 
         <hr>
-        <form action="#">
         <p class="text-content">
-        글 내용
+        {{post.content}}
         </p>
         </div>
 
         </div>            
-            {% comment %} <div class="write-btn">
+        {% comment %} <div class="write-btn">
           <button type="button" class="btn btn-danger">등록</button>
         </div> {% endcomment %}
 </div>
+
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>

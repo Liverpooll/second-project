@@ -33,6 +33,7 @@ div {
   font-size:40px;
   line-height: 80px;
   margin-left: 200px;
+  cursor:pointer;
 }
 
 .header-1 span:nth-child(2) {
