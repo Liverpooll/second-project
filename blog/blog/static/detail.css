@@ -80,27 +80,26 @@ div {
   color: white;
 }
 
-.form-box {
-  display: inline-block;
-}
 
 .mini-wrapper {
+  width:100%;
   display: flex;
+  justify-content: center;
 }
 
 .write-box {
   width:50%;
   height:830px;
-  margin:0 auto;
   background-color: white;
+  display: flex;
   text-align: center;
-
-
+  justify-content: center;
 }
 
 .write-content {
   width:100%;
   margin-top:100px;
+  height:830px;
 }
 
 .text-title {
@@ -128,10 +127,9 @@ div {
 
 }
 
-/* .btn {
-  font-weight:600;
-
-}  */
+.write-btn {
+  width:41px; 
+} 
 
 
 

@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <div class="wrapper">
         <div class="header">
             <div class="header-1">
                 <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
@@ -25,36 +24,39 @@
         </div>
 
 
-        <div class="form-box">
-            <form action="/blog/create/" method="POST">
+           <div class="wrapper2">
+           <div class="wrapper2-1">
+            <form class="form-box"action="/blog/create/" method="POST">
                 {% csrf_token %}
-                <div class="write-title">
-                    <input placeholder="제목을 입력하세요" 
-                    name="title"
-                    style="overflow:hidden" type="text" onfocus="this.placeholder=''"
-                    onblur="this.placeholder='제목을 입력하세요'" class="input-title">
-                    {{title}}</input>
-                </div>
-                <hr>
-                <div class="write-content">
-                    <textarea placeholder="내용을 입력하세요" 
-                    name="content"
-                    onfocus="this.placeholder=''"
-                    onblur="this.placeholder='내용을 입력하세요'"
-                    class="input-content">
-                    {{content}}</textarea>
+                <div class="write-box">
+                    <div class="write-title">
+                        <input placeholder="제목을 입력하세요" name="title" style="overflow:hidden" type="text" onfocus="this.placeholder=''" onblur="this.placeholder='제목을 입력하세요'" class="input-title">
+                        {{title}}</input>
+                    </div>
+                    <hr>
+                    <div class="write-content">
+                        <textarea placeholder="내용을 입력하세요" name="content" onfocus="this.placeholder=''" onblur="this.placeholder='내용을 입력하세요'" class="input-content">{{content}}</textarea>
+                    </div>
                 </div>
                 <div class="write-btn">
-                    <button type="submit" name="btn">버튼</button>
+                    <button type="submit" class="btn btn-danger">글 등록</button>
                 </div>
-            </form>
-        </div>
-    </div>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/static/blog.js" defer></script>
-    <script src="https://kit.fontawesome.com/8b18d55f70.js" crossorigin="anonymous"></script>
+            </form>
+                <div class="write-btn">
+                    <button onclick="location.href='http://127.0.0.1:8000/blog/'"type="submit" class="btn btn-secondary btn-sm">목록으로</button>
+                </div>
+
+            </div>
+            </div>
+
+
+
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="/static/blog.js" defer></script>
+        <script src="https://kit.fontawesome.com/8b18d55f70.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

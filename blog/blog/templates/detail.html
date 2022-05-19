@@ -14,7 +14,6 @@
 
 <body>
 <body>
-    <div class="wrapper">
         <div class="header">
             <div class="header-1">
                 <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
@@ -31,18 +30,15 @@
         <p class="text-title">
         {{post.title}}
         </p>
-
-
         <hr>
         <p class="text-content">
         {{post.content}}
         </p>
         </div>
-
+        <div class="write-btn">
+          <button onclick="location.href='http://127.0.0.1:8000/blog/'" type="button" class="btn btn-danger">목록으로</button>
+        </div> 
         </div>            
-        {% comment %} <div class="write-btn">
-          <button type="button" class="btn btn-danger">등록</button>
-        </div> {% endcomment %}
 </div>
 
 
