@@ -60,7 +60,7 @@ class PostUpdate(APIView):
         post = get_object_or_404(Post, pk=pk)
         return Response({'post':post})
 
-    def put(self, request, pk):
+    def post(self, request, pk):
         post = get_object_or_404(Post, pk=pk)
         serializer = PostSerializer(
             post,

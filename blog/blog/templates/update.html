@@ -29,15 +29,14 @@
            <div class="wrapper2-1">
             <form class="form-box" action="/blog/update/{{post.pk}}" method="POST">
                 {% csrf_token %}
-            <input type="hidden" name="_method" value="PUT"/>
                 <div class="write-box">
                     <div class="write-title">
-                        <input placeholder={{post.title}} name="title" style="overflow:hidden" type="text" onfocus="{{post.title}}" onblur="{{post.title}}" class="input-title">
+                        <input value={{post.title}} name="title" style="overflow:hidden" type="text" onfocus="{{post.title}}" onblur="{{post.title}}" class="input-title">
                         {{title.pk}}</input>
                     </div>
                     <hr>
                     <div class="write-content">
-                        <textarea placeholder={{post.content}} name="content" onfocus="{{post.content}}" onblur="t{{post.content}}" class="input-content">{{content}}</textarea>
+                        <textarea name="content" onfocus="{{post.content}}" onblur="t{{post.content}}" class="input-content">{{post.content}}</textarea>
                     </div>
                 </div>
                 <div class="write-btn">
