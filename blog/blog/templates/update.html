@@ -14,7 +14,7 @@
 
 <body>
 <body>
-    <div class="wrapper">
+
         <div class="header">
             <div class="header-1">
                 <span onclick="location.href='http://127.0.0.1:8000/blog/'">Logo</span>
@@ -24,17 +24,40 @@
                 <span>Logout</span>
             </div>
         </div>
+
+                   <div class="wrapper2">
+           <div class="wrapper2-1">
+            <form class="form-box"action="/blog/create/" method="POST">
+                {% csrf_token %}
+                <div class="write-box">
+                    <div class="write-title">
+                        <input placeholder={{post.title}} name="title" style="overflow:hidden" type="text" onfocus="{{post.title}}" onblur="{{post.title}}" class="input-title">
+                        {{title.pk}}</input>
+                    </div>
+                    <hr>
+                    <div class="write-content">
+                        <textarea placeholder={{post.content}} name="content" onfocus="{{post.content}}" onblur="t{{post.content}}" class="input-content">{{content}}</textarea>
+                    </div>
+                </div>
+                <div class="write-btn">
+                    <button type="submit" onclick="update_onclick({{post.pk}});" class="btn btn-danger">수정</button>
+                </div>
+
+            </form>
+                <div class="write-btn">
+                    <button onclick="location.href='http://127.0.0.1:8000/blog/'"type="submit" class="btn btn-secondary btn-sm">목록으로</button>
+                </div>
         
 
 
-        
+
 </div>
 
 
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="/static/detail.js" defer></script>
+    <script src="/static/update.js" defer></script>
     <script src="https://kit.fontawesome.com/8b18d55f70.js" crossorigin="anonymous"></script>
 </body>
 

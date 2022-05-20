@@ -38,8 +38,17 @@
         <div class="write-btn">
           <button onclick="location.href='http://127.0.0.1:8000/blog/'" type="button" class="btn btn-danger">목록으로</button>
         </div> 
+        <div class="write-btn">
+            <button onclick="location.href='http://127.0.0.1:8000/blog/update/{{post.pk}}'" type="button" class="btn btn-secondary btn-sm">수정하기</button>
+        </div>
+        <div class="write-btn">
+            <button onclick="delete_onclick({{post.pk}})" type="button" class="btn btn-secondary btn-sm delete-button">삭제하기</button>
+        </div>
+
         </div>            
+
 </div>
+
 
 
 

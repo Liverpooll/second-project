@@ -74,6 +74,79 @@ div {
   margin-left:250px;
 }
 
+.wrapper2 {
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper2-1 {
+  width:50%;
+  height:830px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  display: flex;
+  width:100%;
+  height:830px;
+  justify-content: center;
+}
+
+.write-box {
+  width:100%;
+}
+
+.write-title {
+  height:168px;
+}
+
+.input-title {
+  width:100%;
+  height:239px;
+  text-align: center;
+  border:none;
+  font-size:25px;
+  font-weight: 600;
+  padding:1px 60px 1px 60px;
+
+}
+.input-title:focus {
+  outline:none;
+}
+
+.input-content {
+  width:100%;
+  height:700px;
+  text-align: center;
+  border:none;
+  font-size:20px;
+  font-weight: 600;
+  padding:1px 60px 1px 60px;
+}
+
+.input-content {
+  outline:none;
+}
+
+.write-box hr {
+  width:80%;  
+  margin-left : auto;
+  margin-right : auto;
+}
+
+.write-btn {
+  width:20px;
+}
+
+.btn-secondary {
+  margin-left:-20px;
+  padding:10px 10px 10px 10px;
+}
+
+
 
 
 
