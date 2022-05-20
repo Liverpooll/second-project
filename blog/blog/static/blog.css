@@ -122,6 +122,7 @@ div {
   font-size:25px;
   color:#c62828;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .list-1 span:nth-child(2) {
@@ -132,7 +133,6 @@ div {
 
 .list-1 span:nth-child(3) {
   font-size:20px;
-  cursor: pointer;
   display: inline-block;
 }
 

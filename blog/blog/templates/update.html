@@ -27,8 +27,9 @@
 
                    <div class="wrapper2">
            <div class="wrapper2-1">
-            <form class="form-box"action="/blog/create/" method="POST">
+            <form class="form-box" action="/blog/update/{{post.pk}}" method="POST">
                 {% csrf_token %}
+            <input type="hidden" name="_method" value="PUT"/>
                 <div class="write-box">
                     <div class="write-title">
                         <input placeholder={{post.title}} name="title" style="overflow:hidden" type="text" onfocus="{{post.title}}" onblur="{{post.title}}" class="input-title">
@@ -47,10 +48,6 @@
                 <div class="write-btn">
                     <button onclick="location.href='http://127.0.0.1:8000/blog/'"type="submit" class="btn btn-secondary btn-sm">목록으로</button>
                 </div>
-        
-
-
-
 </div>
 
 
